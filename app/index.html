@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="favicon" href="favicon.ico">
     <title>Lollypop Challenge</title>
+    <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
 </head>
 <body>
     <main class="main">
@@ -64,84 +79,84 @@
                 </div>
             </div>
        </section>
-    </main>
-    <div class="gb-explore">
-        <h2 class="gb-explore__title">explore indian health</h2>
-        <div class="gb-explore__content">
-            <div class="gb-explore__lists">
-                <ul class="gb-explore__lists__main">
-                    <ul>
-                        <li>Medical</li>
-                        <li>Para Clinical</li>
-                        <li>Pathology</li>
-                        <li>Pharmacology</li>
-                        <li>Nursing</li>
-                        <li>Clinical</li>
-                        <li>Anesthasia</li>
-                        <li>Clinical Medicine</li>
+           <section class="gb-explore">
+            <h2 class="gb-explore__title">explore indian health</h2>
+            <div class="gb-explore__content">
+                <div class="gb-explore__lists">
+                    <ul class="gb-explore__lists__main">
+                        <ul>
+                            <li>Medical</li>
+                            <li>Para Clinical</li>
+                            <li>Pathology</li>
+                            <li>Pharmacology</li>
+                            <li>Nursing</li>
+                            <li>Clinical</li>
+                            <li>Anesthasia</li>
+                            <li>Clinical Medicine</li>
+                        </ul>
+                        <ul>
+                            <li>Dentistry</li>
+                            <li>General Medicine</li>
+                            <li>Obstetrics</li>
+                            <li>Opthalmology</li>
+                            <li>Physio</li>
+                            <li>Paediatrics</li>
+                            <li>Preventive</li>
+                            <li>Medical Psychiatry</li>
+                        </ul>
                     </ul>
-                    <ul>
-                        <li>Dentistry</li>
-                        <li>General Medicine</li>
-                        <li>Obstetrics</li>
-                        <li>Opthalmology</li>
-                        <li>Physio</li>
-                        <li>Paediatrics</li>
-                        <li>Preventive</li>
-                        <li>Medical Psychiatry</li>
+                    <ul class="gb-explore__lists__last">
+                        <ul>
+                            <li>Radiology</li>
+                            <li>Dermatology</li>
+                            <li>Orthopedics</li>
+                            <li>Microbiology</li>
+                        </ul>
+                        <ul>
+                            <li>ENT</li>
+                            <li>Dermatology</li>
+                            <li>Orthopedics</li>
+                            <li>Microbiology</li>
+                        </ul>
                     </ul>
-                </ul>
-                <ul class="gb-explore__lists__last">
-                    <ul>
-                        <li>Radiology</li>
-                        <li>Dermatology</li>
-                        <li>Orthopedics</li>
-                        <li>Microbiology</li>
-                    </ul>
-                    <ul>
-                        <li>ENT</li>
-                        <li>Dermatology</li>
-                        <li>Orthopedics</li>
-                        <li>Microbiology</li>
-                    </ul>
-                </ul>
-            </div>
-            <div class="gb-explore__others" id="others">
-                <h5 class="gb-explore__others__title">Provide your email address to stay update with the latest news</h5>
-                <form>
-                    <label class="gb-explore__label" for="subscribe">
-                        <input class="gb-explore__input" type="text" id="subscribe" name="subscribe" placeholder="Email Address">
-                        <a class="gb-explore__subscribe-btn" href="#others">go</a>
-                    </label>
-                </form>
-                <div class="gb-explore__social">
-                    <div class="gb-explore__social__rss">
-                        <p>RSS Feed</p>
-                        <div class="gb-explore__social__stories">
-                            <p class="gb-explore__social__story">top stories <span class="gb-explore__social__rss__icon"><i class="fa fa-rss"></i></span></p>
-                            <p class="gb-explore__social__story">latest stories <span class="gb-explore__social__rss__icon"><i class="fa fa-rss"></i></span></p>
+                </div>
+                <div class="gb-explore__others" id="others">
+                    <h5 class="gb-explore__others__title">Provide your email address to stay update with the latest news</h5>
+                    <form>
+                        <label class="gb-explore__label" for="subscribe">
+                            <input class="gb-explore__input" type="text" id="subscribe" name="subscribe" placeholder="Email Address">
+                            <a class="gb-explore__subscribe-btn" href="#others">go</a>
+                        </label>
+                    </form>
+                    <div class="gb-explore__social">
+                        <div class="gb-explore__social__rss">
+                            <p>RSS Feed</p>
+                            <div class="gb-explore__social__stories">
+                                <p class="gb-explore__social__story">top stories <span class="gb-explore__social__rss__icon"><i class="fa fa-rss"></i></span></p>
+                                <p class="gb-explore__social__story">latest stories <span class="gb-explore__social__rss__icon"><i class="fa fa-rss"></i></span></p>
+                            </div>
+                        </div>
+                        <div class="gb-explore__social__follow">
+                            <p>Follow us On</p>
+                            <p><span class="gb-explore__social__icons"><i class="fa fa-facebook"></i></span></p>
+                            <p><span class="gb-explore__social__icons"><i class="fa fa-twitter"></i></span></p>
+                            <p><span class="gb-explore__social__icons"><i class="fa fa-linkedin"></i></span></p>
                         </div>
                     </div>
-                    <div class="gb-explore__social__follow">
-                        <p>Follow us On</p>
-                        <p><span class="gb-explore__social__icons"><i class="fa fa-facebook"></i></span></p>
-                        <p><span class="gb-explore__social__icons"><i class="fa fa-twitter"></i></span></p>
-                        <p><span class="gb-explore__social__icons"><i class="fa fa-linkedin"></i></span></p>
-                    </div>
                 </div>
+                <ul class="gb-explore__nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Subscription</a></li>
+                </ul>
             </div>
-            <ul class="gb-explore__nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Subscription</a></li>
-            </ul>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer class="gb-footer">
         <p>&#x00A9; 2016 Copyright</p>
         <ul class="gb-footer__nav">
