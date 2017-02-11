@@ -1,6 +1,9 @@
 #Lollypop Hiring Challenge :
 
 ###Tech Used :
+ - Flexbox
+ - Html5
+ - CSS3
  - CSS-loader
  - Style-loader
  - PostCSS
@@ -9,7 +12,7 @@
 #![Alt text](https://github.com/nrvarun/lollypop-hack/blob/master/Mobile.JPG?raw=true "Pagespeed Insights - Mobile")
 #![Alt text](https://github.com/nrvarun/lollypop-hack/blob/master/Desktop.JPG?raw=true "Pagespeed Insights - Desktop")
 
- ###How to Run :
+ #How to Run :
  - yarn install
  - Run yarn run dev for development
  - Run yarn run prod for production
