@@ -7,7 +7,7 @@
  - Webpack
  
 #![Alt text](https://github.com/nrvarun/zetahack2/blob/master/Mobile.JPG?raw=true "Pagespeed Insights - Mobile")
-#![Alt text](https://github.com/nrvarun/zetahack2/blob/master/Desktop.JPG?raw=true "Pagespeed Insights - Mobile")
+#![Alt text](https://github.com/nrvarun/zetahack2/blob/master/Desktop.JPG?raw=true "Pagespeed Insights - Desktop")
 
  ###How to Run
  - yarn install
