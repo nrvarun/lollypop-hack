@@ -1,8 +1,10 @@
-#Webpack boilerplate with :
+#Lollypop Hiring Challenge :
  - CSS-loader
  - Style-loader
  - PostCSS
  
- #NPM tasks
- - Run npm run dev for development
- - Run npm run prod for production
+ #How to Run
+ - yarn install
+ - Run yarn run dev for development
+ - Run yarn run prod for production
+ - Run local node server with node server
