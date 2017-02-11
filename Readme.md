@@ -6,8 +6,8 @@
  - PostCSS
  - Webpack
  
-#![Alt text](https://github.com/nrvarun/zetahack2/blob/master/Mobile.JPG?raw=true "Pagespeed Insights - Mobile")
-#![Alt text](https://github.com/nrvarun/zetahack2/blob/master/Desktop.JPG?raw=true "Pagespeed Insights - Desktop")
+#![Alt text](https://github.com/nrvarun/lollypop-hack/blob/master/Mobile.JPG?raw=true "Pagespeed Insights - Mobile")
+#![Alt text](https://github.com/nrvarun/lollypop-hack/blob/master/Desktop.JPG?raw=true "Pagespeed Insights - Desktop")
 
  ###How to Run
  - yarn install
