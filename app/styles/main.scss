@@ -12,6 +12,10 @@ body {
 
 }
 
+main {
+  overflow: hidden;
+}
+
 %flex {
   display: flex;
 }
@@ -23,7 +27,6 @@ $footer-bgcolor: rgb(47, 49, 56);
 .main {
   @extend %flex;
   flex-flow: column nowrap;
-  overflow: none;
 }
 
 .gb {
@@ -310,7 +313,7 @@ $footer-bgcolor: rgb(47, 49, 56);
     margin: 0.5em;
     padding: 0.5em;
     position: relative;
-    right: 70px;
+    right: 60px;
     text-decoration: none;
     text-transform: uppercase;
     top: 0px;

@@ -4,13 +4,16 @@ let ETP = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let webpack = require('webpack');
 let path = require('path');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
-    './app/js/main.js'
+    './app/script/main.js'
   ],
   output: {
-    filename: './js/bundle.js',
+    filename: './script/bundle.js',
     path: path.resolve(__dirname, './dist')
   },
   eslint: {
@@ -24,7 +27,7 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         loader: ETP.extract(
           'style',
           'css!postcss!sass')
@@ -37,9 +40,14 @@ module.exports = {
           presets: ['react', 'es2015']
         }
       },
-       {
-        test: /\.(png|jpg)$/,
-        loader: require.resolve('file-loader') + '?name=../[path][name].[ext]'
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        loader: 'file?name=assets/[name].[ext]'
+      },
+      {
+        test: /\.(jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\.*$|$)/,
+        loader: 'file?name=assets/[name].[ext]'
       }
     ]
   },
@@ -50,7 +58,10 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false}),
-    new ETP('./css/style.css'),
+    new ETP('./styles/style.css'),
+    new PurifyCSSPlugin({
+      paths: glob.sync(path.join(__dirname, 'app/*.html'))
+    }),
     new HtmlWebpackPlugin({
       template: './app/index.html',
       inject: true,
@@ -62,6 +73,14 @@ module.exports = {
         collapseWhitespace: false,
         useShortDoctype: true
       }
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'app/manifest.json', to: 'manifest.json'
+      },
+      {
+        from: 'app/service-worker.js', to: 'service-worker.js'
+      }
+    ])
   ]
 };

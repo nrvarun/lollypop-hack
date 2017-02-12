@@ -6,10 +6,10 @@ let path = require('path');
 
 module.exports = {
   entry: [
-    './app/js/main.js'
+    './app/script/main.js'
   ],
   output: {
-    filename: './js/bundle.js',
+    filename: './script/bundle.js',
     path: path.resolve(__dirname, './')
   },
   eslint: {
@@ -30,8 +30,7 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
+        test: /\.(scss|css)$/,
         loader: ETP.extract('style-loader', 'css!postcss!sass')
       },
       {
@@ -43,8 +42,8 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg)$/,
-        loader: require.resolve('file-loader') + '?name=../[path][name].[ext]'
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)/,
+        loader: 'file?name=assets/[name].[ext]'
       }
     ]
   },
@@ -55,7 +54,7 @@ module.exports = {
     contentBase: './app'
   },
   plugins: [
-    new ETP('style.css'),
+    new ETP('./styles/style.css'),
     new HtmlWebpackPlugin({
       template: './app/index.html',
       inject: true

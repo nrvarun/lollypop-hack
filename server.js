@@ -1,10 +1,10 @@
-var path 	=	require('path');
-var express = 	require('express');
-var app 	= 	express();
+let path 	=	require('path');
+let express = 	require('express');
+let app 	= 	express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8080;
+let port = process.env.PORT || 8000;
 
 // set the view engine to ejs
 app.set('view engine', 'jade');
@@ -13,12 +13,11 @@ app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname + '/dist')));
 
 // set the home page route
-app.get('/', function(req, res) {
-
+app.get('/', function (req, res) {
 	// ejs render automatically looks in the views folder
-	res.render('index');
+  res.render('index');
 });
 
-app.listen(port, function() {
-	console.log('Our app is running on http://localhost:' + port);
+app.listen(port, function () {
+  console.log('Our app is running on http://localhost:' + port);
 });
