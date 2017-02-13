@@ -313,7 +313,7 @@ $footer-bgcolor: rgb(47, 49, 56);
     margin: 0.5em;
     padding: 0.5em;
     position: relative;
-    right: 60px;
+    right: 70px;
     text-decoration: none;
     text-transform: uppercase;
     top: 0px;
@@ -411,6 +411,9 @@ $footer-bgcolor: rgb(47, 49, 56);
   .gb {
     padding: 5em;
   }
+  .gb-explore__subscribe-btn {
+    right: 75px;
+  }
 
 }
 @media screen and (max-width: 480px) {
@@ -418,6 +421,10 @@ $footer-bgcolor: rgb(47, 49, 56);
   .gb {
     padding: 2em;
     height: auto;
+  }
+
+  .gb-explore__subscribe-btn {
+    right: 65px; 
   }
 
   .gb__title {
@@ -698,6 +705,10 @@ $footer-bgcolor: rgb(47, 49, 56);
 }
 .gb-cards__featured__main p {
   font-size: 1em;
+}
+
+.gb-explore__subscribe-btn {
+  right: 75px;
 }
 
 .gb-explore {
