@@ -10,32 +10,6 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </noscript>
-    <script>
-        //Service worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }).catch(function(err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-        //Lazy load styles
-        var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
 </head>
 <body>
     <main class="main">
@@ -45,19 +19,19 @@
                 <div class="gb-cards">
                     <div class="gb-cards__featured">
                         <div class="gb-cards__featured__main">
-                            <img class="gb-card__avatar" src="./assets/avatar.png" alt="user image"/>
+                            <img class="gb-card__avatar" src="./assets/avatar-min.png" data-src="avatar.png" alt="user image"/>
                             <h3 class="gb-card__name">Riya Dingandkar</h3>
                             <h5 class="gb-card__designation">Surgeon & Padeatric</h5>
                             <p class="gb-card__description">I recently started a blog, and was browsing Etsy for a cute template to help personalize my blog platform.</p>
                         </div>
                         <div class="gb-cards__featured__sub">
                             <div class="gb-card gb-card--others">
-                                <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others1.png" alt="user image"/>
+                                <img class="gb-card__avatar gb-card__avatar--others"  src="./assets/others1-min.png" data-src="others1.png" alt="user image"/>
                                 <h3 class="gb-card__name gb-card__name--others">Riya Dingandkar</h3>
                                 <h5 class="gb-card__designation gb-card__designation--others">Surgeon & Padeatric</h5>
                             </div>
                             <div class="gb-card gb-card--others">
-                                <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others2.png" alt="user image"/>
+                                <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others2-min.png" data-src="others2.png" alt="user image"/>
                                 <h3 class="gb-card__name gb-card__name--others">Riya Dingandkar</h3>
                                 <h5 class="gb-card__designation gb-card__designation--others">Surgeon & Padeatric</h5>
                             </div>
@@ -65,14 +39,14 @@
                     </div>
                     <div class="gb-cards__others">
                         <div class="gb-card gb-card--others">
-                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others3.png" alt="user image"/>
+                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others3-min.png" data-src="others3.png" alt="user image"/>
                             <div class="gb-card__details">
                                 <h3 class="gb-card__name gb-card__name--others">Riya Dingandkar</h3>
                                 <h5 class="gb-card__designation gb-card__designation--others">Surgeon & Padeatric</h5>
                             </div>
                         </div>
                         <div class="gb-card gb-card--others">
-                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others4.png" alt="user image"/>
+                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/others4-min.png" data-src="others4.png" alt="user image"/>
                             <div class="gb-card__details">
                                 <h3 class="gb-card__name gb-card__name--others">Riya Dingandkar</h3>
                                 <h5 class="gb-card__designation gb-card__designation--others">Surgeon & Padeatric</h5>
@@ -83,7 +57,7 @@
                             <a href="#" class="gb-card__link">join us</a>
                         </div>
                         <div class="gb-card gb-card--others">
-                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/avatar.png" alt="user image"/>
+                            <img class="gb-card__avatar gb-card__avatar--others" src="./assets/avatar-min.png" data-src="avatar.png" alt="user image"/>
                             <div class="gb-card__details">
                                 <h3 class="gb-card__name gb-card__name--others">Riya Dingandkar</h3>
                                 <h5 class="gb-card__designation gb-card__designation--others">Surgeon & Padeatric</h5>
